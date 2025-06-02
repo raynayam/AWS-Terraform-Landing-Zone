@@ -63,7 +63,8 @@ This Terraform module creates a secure, scalable AWS landing zone with multi-acc
    }
    ```
     Configure the S3 backend for Terraform state
-    terraform {
+    terraform 
+   ```  {
   backend "s3" {
     bucket         = "your-terraform-state-bucket"
     key            = "landing-zone/terraform.tfstate"
@@ -71,8 +72,8 @@ This Terraform module creates a secure, scalable AWS landing zone with multi-acc
     dynamodb_table = "terraform-state-lock"
     encrypt        = true
   }
-    }
-
+    } 
+ 
 4. Apply the configuration:
    ```bash
    terraform plan
